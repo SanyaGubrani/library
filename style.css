@@ -16,6 +16,7 @@
 
 body{
     background: var(--secondary-color-light);
+    font-family:'Capriola', sans-serif;
 }
 
 .main-header{
@@ -39,7 +40,6 @@ body{
 /* Add-books button*/
 .add-books{
     background: var(--secondary-color);
-    font-family:'Capriola', sans-serif;
     color: var(--secondary-color-light);
     border-radius: 55px;
     border: none;
@@ -69,9 +69,10 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 15;
-    border: 1px solid rgba(236, 123, 119, 0.474);
+    border: 1px solid #6eb504;
     padding: 20px;
-    background-color: #7a3945e5;
+    background-color: var(--primary-color);
+    color: var(--secondary-color-light);
     filter: blur();
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
     font-size: 19px;
@@ -84,13 +85,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: whitesmoke;
+    color: var(--secondary-color-light);
 }
 
 .heading h2{
-    margin-right: 60px;
-    font-size: 1.55rem;
+    font-weight: 200;
+    font-size: 1.5rem;
     padding-top: 5px;
+    font-family: 'capriola';
 }
 
 .close-btn{
@@ -99,9 +101,9 @@ body{
     outline: none;
     border: none;
     font-size: 38px;
-    color:whitesmoke;
+    color: var(--secondary-color-light);
     cursor: pointer;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .form{
@@ -109,7 +111,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .content{
@@ -121,28 +123,37 @@ body{
     background-color: #faf2e7dc;
 }
 
+
 input[type="checkbox"] {
-   color: #fbead5;
    margin: 20px 0;
+   translate: 9px 3px;
 }
 
+input::placeholder {
+    font-size: 1rem;
+    color: #203500;
+}
+
+
 .check{
-    color: #fee6c8;
-    font-size: 23px;
+    font-size: 20px;
+    letter-spacing: 0.07rem;
+    font-family: 'capriola';
 }
 
 .checkbox{
     width: 20px;
     height: 20px;
-    accent-color: white;
+    accent-color: var(--secondary-color-light);
 }
 
 .submit{
     border-radius: 20px;
     font-size: 1.1rem;
-    color: #5e2b35;
+    color: var(--primary-color);
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.09rem;
+    font-family: 'capriola';
 }
 
 .submit:hover{
