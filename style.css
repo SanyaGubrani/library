@@ -11,6 +11,9 @@
     --primary-color: #445a14;
     --secondary-color: #586e26;
     --secondary-color-light:#ebf7cc;
+
+    --box-clr: #414a1ff9;
+    --box-clr-light: #ecf39e;
 }
 
 
@@ -55,6 +58,7 @@ body{
     font-size: 1.6rem;
     margin: 5rem 0;
     letter-spacing: 0.09rem;
+    font-family: 'capriola';
 }
 
 .add-books:hover{
@@ -181,7 +185,7 @@ input::placeholder {
     place-items: center;
     margin-left: 5%;
     margin-right: 5%;
-    gap:40px;
+    gap:45px;
     grid-auto-flow: row;
 }
 
@@ -192,39 +196,48 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 18px;
-    font-size: 1.26rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.09rem;
+    line-height: 0.5rem;
     border-radius: 25px;
-    background-color: #f3ebe2;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #884854 0px 8px 16px -8px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--box-clr);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #162d05 0px 8px 16px -8px;
+    font-family:'capriola', sans-serif;
+    color: var(--secondary-color-light);
 } 
 
+.book-name{
+    margin-top: -3.3rem;
+}
+
 .remove{
-    margin-left: 330px;
     border: none;
-    font-size: 2rem;
+    font-size: 2.2rem;
     background-color: #f3ebe2;
     font-weight: 500;
     cursor: pointer;
-    margin-bottom: -20px;
-    margin-top: -20px;
-    color: rgb(77, 75, 75);
+    translate: 10.5rem -1rem;
+    color: var(--secondary-color-light);
+    background-color: transparent;
 }
 
+
 .remove:hover{
-    color: black;
+    color: var(--font-color);
 }
 
 
 .read{
     border: none;
-    font-size: 1.3rem;
-    padding: 15px 45px 15px 45px;
-    background-color: #753742ef;
-    color: whitesmoke;
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-light);
     border-radius: 30px;
     white-space: nowrap;
+    font-family: 'capriola', sans-serif;
+    translate: 0 5px;
 }
 
 .read:hover{
@@ -246,15 +259,31 @@ input::placeholder {
     .container button{
         padding: 1rem 1.7rem;
         font-size: 1.3rem;
-        margin: 3.7rem 0;
         letter-spacing: 0.09rem;
+        translate: 0 -0.5rem;
     }
 
     .books-display{
         height: 220px;
-        width: 390px;
-        margin-right: 2.1rem;
-        margin-top: -20px;
+        width: 350px;
+        translate: -0.9rem -3rem;
+    }
+
+    .remove{
+        translate: 9.2rem -1.2rem;
+    }
+
+}
+
+@media(max-width:400px){
+    .books-display{
+        height: 220px;
+        width: 300px;
+        translate: -2rem -3rem;
+    }
+
+    .remove{
+        translate: 7.9rem -1.2rem;
     }
 
 }
